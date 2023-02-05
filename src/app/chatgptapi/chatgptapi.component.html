@@ -1,0 +1,15 @@
+<h3 align="center">CHATGPTAPI ZAKARIA JABILOU</h3>
+
+<div>
+  <form (ngSubmit)="onSubmit(name)" >
+    <label for="fname">Answer your question</label>
+    <input type="text" id="fname" name="firstname"  [(ngModel)]="name">
+    <div *ngIf="z" else Loading>
+      <input type="text" #Loading id="fname2" else Loading name="firstname"  value="{{z.choices[0].text}}">
+    </div>
+
+
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
